@@ -1,0 +1,38 @@
+#DAY 2 문제풀이
+#두 정수 사이의 합
+def solution(a, b):
+    answer = (abs(a-b) + 1)*(a+b) / 2
+    return answer
+    
+#문자열을 정수로 바꾸기
+    def solution(s):
+    answer = int(s)
+    return answer
+    
+#가운데 글자 가져오기
+    def solution(s):
+    if len(s)%2 == 1:
+        answer = s[len(s)//2]
+    else:
+        answer = s[len(s)//2-1:len(s)//2 + 1] #slicing 범위 주의
+    return answer
+#정수 제곱근 판별
+def solution(n):
+    import math #가져온다 math 
+    if  math.sqrt(n) == int(math.sqrt(n)): #math.sqrt 는 제곱근 나타내주는거
+        answer = (math.sqrt(n) + 1)**2
+    else:
+        answer = -1
+    return answer
+#문자열 다루기 기본
+def solution(s):
+    if len(s) == 4 or 6:
+        try: int(s) #int(s) 일 때를 try한다
+        except: #에러일때
+            answer = False 
+        else:
+            answer = True
+    else:
+        answer = False
+
+    return answer #근데 틀렸다고 한다 다른 방법을 찾아보자
