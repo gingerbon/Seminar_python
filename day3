@@ -1,0 +1,130 @@
+# 문자열 내 p와 y의 개수
+def solution(s):
+    # p랑 y의 개수 찾기
+    nump = 0
+    numy = 0
+    # for 문으로
+    for i in range(len(s)):
+        if s[i] == 'p':
+            nump += 1
+    for j in range(len(s)):
+        if s[j] == 'P':
+            nump += 1
+    for k in range(len(s)):
+        if s[k] == 'y':
+            numy += 1
+    for l in range(len(s)):
+        if s[l] == 'Y':
+            numy += 1
+    if nump == numy:
+        answer = True
+    else:
+        answer = False
+    return answer
+    # 간단하게 하는 법을 찾고싶당
+    # 김서방 찾기
+    def solution(seoul):
+    find = 0
+    for i in range(len(seoul)):
+        if seoul[i] == 'Kim':
+            find = i
+    stri = str(find)
+    answer = '김서방은 ' +stri+ '에 있다'
+    return answer
+    # 문자열이랑 인트형 같이 띄우는게 어려웠다
+    # 약수의 합
+    def solution(n):
+    summ = 0
+    for i in range(1,n+1):
+        if n%i == 0:
+            summ += i
+    answer = summ
+    return answer
+    
+   # 이상한 문자 만들기 처음 짰던 코드
+   def solution(s):
+    string = 'abcdefghijklmnopqrstuvwxyz'
+    String = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    a = []
+    for i in range(len(s)):
+        if i%2 == 1: # 홀수번째
+            for j in range(len(string)):
+                if s[i] == string[j]:
+                    a.append(string[j])
+                
+        elif i%2 ==0: #짝수번째
+            for k in range(len(String)):
+                if s[i] == string[k]:
+                    a.append(String[k])
+                
+    b = ''
+    for i in a:
+        b += i
+    answer = b
+    return answer 
+    # 근데 뭔가 이상해서 다시 짜기로 했다###############
+    # 자릿수 더하기
+    def solution(n):
+    answer = 0
+    # n이 345면 n%10 = 5 n//10 = 34 다시 n%10 은 4 n//10 = 3 n%10은 3 n//10 은 0
+    while n != 0:
+        answer += n%10
+        n = n//10
+    return answer
+    # 자연수 뒤집어 배열로 만들기
+    def solution(n):
+    answer = []
+    while n != 0:
+        answer.append(n%10)
+        n = n//10
+    
+    return answer # 자릿수 더하기 응용한 느낌이었다
+    
+    # 제일 작은 수 제거하기
+    
+   def solution(arr):
+    delete = min(arr)
+    answer = []
+    for i in range(len(arr)):
+        if arr[i] != delete:    
+            answer.append(arr[i])
+    if min(arr) == arr[0]:
+        answer.append(-1)
+    return answer
+    
+    # 콜라츠 추측
+    def solution(num):
+    cnt = 0
+    while num != 1:
+        cnt += 1
+        if num%2 == 0 :
+            num = num / 2
+        else:
+            num = num * 3 + 1
+    answer = cnt
+    if cnt > 500:
+        answer = -1
+    return answer
+    # 평균 구하기
+    def solution(arr):
+    summ = 0
+    for i in range(len(arr)):
+        summ += arr[i]
+    
+    answer = summ / len(arr)
+    return answer
+    # 하샤드 수
+    def solution(x):
+    # 자릿수 합 구하기
+    summ = 0
+    n = x
+    while n != 0:
+        summ += n%10
+        n = n//10
+    if x%summ == 0:
+        answer = True
+    else:
+        answer = False
+    return answer
+    
+    
